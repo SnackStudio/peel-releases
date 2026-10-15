@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+  <channel>
+    <title>Peel</title>
+    <link>https://www.snackstud.io/peel/appcast.xml</link>
+    <description>Peel updates from Snack Studio</description>
+    <language>en</language>
+    <item>
+      <title>Version 1.0.0</title>
+      <pubDate>Thu, 15 Oct 2026 02:02:55 GMT</pubDate>
+      <sparkle:version>8</sparkle:version>
+      <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <sparkle:releaseNotesLink>https://github.com/SnackStudio/peel-releases/releases/tag/v1.0.0</sparkle:releaseNotesLink>
+      <enclosure url="https://github.com/SnackStudio/peel-releases/releases/download/v1.0.0/Peel-1.0.0.dmg" type="application/octet-stream" sparkle:edSignature="Hl92Vxi+ymTYI/53kL0PlpbhoNsl++lceBXAkCaFdsWe3incNitBwCDK7t5JC8WCgOAXeR2MQM7aGzp7ADyPAg==" length="25177264" />
+    </item>
+  </channel>
+</rss>
