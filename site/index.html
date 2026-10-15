@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Peel: open archives like folders on your Mac</title>
   <meta name="description" content="Peel is a free macOS unarchiver from Snack Studio. Double-click a ZIP, RAR, 7z or TAR archive and browse it like a folder in Finder.">
-  <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/caprasimo.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -18,7 +18,7 @@
   <meta name="theme-color" content="#fff8ef" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1a120c" media="(prefers-color-scheme: dark)">
   <style>
-    @font-face { font-family: "Bricolage Grotesque"; src: url(/fonts/bricolage-grotesque.woff2) format("woff2"); font-weight: 200 800; font-display: swap; }
+    @font-face { font-family: "Caprasimo"; src: url(/fonts/caprasimo.woff2) format("woff2"); font-weight: 400; font-display: swap; }
     @font-face { font-family: "Figtree"; src: url(/fonts/figtree.woff2) format("woff2"); font-weight: 300 900; font-display: swap; }
     @font-face { font-family: "JetBrains Mono"; src: url(/fonts/jetbrains-mono.woff2) format("woff2"); font-weight: 100 800; font-display: swap; }
     :root {
@@ -42,7 +42,7 @@
       --band: #2a1a0e;
       --band-ink: #fff3e3;
       --band-muted: #c9b29a;
-      --display: "Bricolage Grotesque", "Figtree", -apple-system, BlinkMacSystemFont, sans-serif;
+      --display: "Caprasimo", Georgia, -apple-system, BlinkMacSystemFont, sans-serif;
       --sans: "Figtree", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
       --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
     }
@@ -88,7 +88,7 @@
 
     /* Nav */
     nav.top { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; }
-    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font: 800 21px/1 var(--display); letter-spacing: -0.01em; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font: 400 21px/1 var(--display); letter-spacing: -0.01em; }
     .brand img { width: 34px; height: 34px; }
     nav.top ul { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; align-items: center; }
     nav.top ul a { text-decoration: none; color: var(--muted); font-weight: 600; font-size: 15px; padding: 8px 12px; border-radius: 10px; }
@@ -100,7 +100,7 @@
     .hero { display: grid; grid-template-columns: 1fr 1.08fr; gap: 56px; align-items: center; padding: 48px 0 88px; }
     .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; color: var(--leaf); background: color-mix(in srgb, var(--leaf) 12%, transparent); padding: 6px 12px; border-radius: 999px; }
     .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
-    h1 { font: 800 clamp(46px, 6.6vw, 78px)/0.96 var(--display); letter-spacing: -0.04em; margin: 20px 0 20px; }
+    h1 { font: 400 clamp(44px, 6.2vw, 74px)/1.0 var(--display); letter-spacing: -0.015em; margin: 20px 0 20px; }
     h1 em { font-style: normal; color: var(--accent); }
     .lede { font-size: clamp(18px, 2vw, 21px); color: var(--muted); max-width: 30em; margin: 0 0 32px; }
     .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
@@ -184,7 +184,7 @@
     /* Sections */
     section { padding: 88px 0; }
     .kicker { font-weight: 700; color: var(--accent); font-size: 15px; margin: 0 0 10px; }
-    h2 { font: 800 clamp(32px, 4.4vw, 52px)/1.04 var(--display); letter-spacing: -0.03em; margin: 0 0 16px; }
+    h2 { font: 400 clamp(30px, 4vw, 48px)/1.08 var(--display); letter-spacing: -0.01em; margin: 0 0 16px; }
     .sub { color: var(--muted); font-size: 19px; max-width: 36em; margin: 0; }
 
     /* Formats */
@@ -202,10 +202,10 @@
     .feature + .feature { border-top: 1px dashed var(--line); }
     .features { margin-top: 32px; }
     .features .feature:nth-child(even) .art { order: -1; }
-    .feature h3 { font: 800 clamp(26px, 3vw, 34px)/1.1 var(--display); letter-spacing: -0.02em; margin: 0 0 12px; }
+    .feature h3 { font: 400 clamp(26px, 3vw, 34px)/1.1 var(--display); letter-spacing: -0.005em; margin: 0 0 12px; }
     .feature p { color: var(--muted); margin: 0 0 14px; font-size: 18px; }
     .feature p b { color: var(--ink); }
-    .feature .step { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--accent); color: var(--on-accent); font: 800 16px var(--display); margin-bottom: 16px; }
+    .feature .step { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--accent); color: var(--on-accent); font: 400 16px var(--display); margin-bottom: 16px; }
     .art { display: grid; place-items: center; min-height: 280px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 24px; padding: 32px; position: relative; overflow: hidden; }
 
     /* context menu mock */
