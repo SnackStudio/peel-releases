@@ -584,7 +584,7 @@
                 <div class="canvas">
                   <div class="win">
                     <div class="wbar"><span class="dots"><i></i><i></i><i></i></span>
-                      <span class="wtitle"><span class="ta">Downloads</span><span class="tb"><img src="/formats/zip.png" alt="">trip-photos.zip</span></span>
+                      <span class="wtitle"><span class="ta">Downloads</span><span class="tb"><svg viewBox="0 0 16 13" width="16" height="13" aria-hidden="true" style="flex:none"><path d="M1.5 2.5A1.5 1.5 0 0 1 3 1h3l1.3 1.3H13A1.5 1.5 0 0 1 14.5 3.8v6.7A1.5 1.5 0 0 1 13 12H3a1.5 1.5 0 0 1-1.5-1.5z" fill="#54b2f6"/><path d="M1.5 4.5h13v6A1.5 1.5 0 0 1 13 12H3a1.5 1.5 0 0 1-1.5-1.5z" fill="#3b9ae8"/></svg>trip-photos</span></span>
                     </div>
                     <div class="grid-view">
                       <div class="item" data-i="zip" style="left:28px;top:30px"><div class="ic"><img src="/formats/zip.png" alt=""></div><span class="lb">trip-photos.zip</span></div>
@@ -898,7 +898,7 @@
       var B = 520, C0 = B / 2, STRIPS = 14, PAD = 0.07;
       // The sticker's feel.
       var T = { curl: 0.55, autoPeel: 0.6, liftOff: -0.05, edgeLift: 0.35, shadow: 1, gloss: 0.8, wobble: 1,
-                border: 9, flapShade: 0.5, showThrough: 0.16, pause: 2600 };
+                border: 9, flapShade: 0.5, showThrough: 0.16, pause: 1900 };
       var q = function (sel) { return stk.querySelector(sel); };
       var s3d = q(".s3d"), flat = q(".flat"), flatImg = q(".flat img"), foldShade = q(".foldshade"),
           gloss = q(".gloss"), shadow = q(".shadow");
@@ -1154,11 +1154,14 @@
         if (S.mode !== "idle") return;
         S.mode = "auto";
         var d = DIRS[n++ % DIRS.length], G = [C0 + d[0] * 0.42 * B, C0 + d[1] * 0.42 * B];
-        var reach = T.autoPeel * 0.75 * B;
-        tween(1400, function (t) {
+        // A little variation each cycle so the idle peel feels alive, not looped.
+        var vary = 0.82 + 0.26 * Math.random();          // 0.82–1.08
+        var reach = T.autoPeel * 0.75 * B * vary;
+        var peak = 0.3 * vary;
+        tween(1300, function (t) {
           var e = inOut(t), P = [G[0] - d[0] * reach * e, G[1] - d[1] * reach * e];
-          S.fold = foldFor(G, P); S.lift = 0.3 * e;
-        }, function () { later(function () { stickDown(function () { later(demo, T.pause); }); }, 900); });
+          S.fold = foldFor(G, P); S.lift = peak * e;
+        }, function () { later(function () { stickDown(function () { later(demo, T.pause); }); }, 700); });
       }
 
       if (reduce) {
