@@ -98,7 +98,10 @@
 <body>
   <main>
     <header class="hero">
-      <img src="/icon-512.png" alt="Peel app icon: an orange with a peeling sticker corner" width="168" height="168">
+      <picture>
+        <source srcset="/icon-512-dark.png" media="(prefers-color-scheme: dark)">
+        <img src="/icon-512.png" alt="Peel app icon: an orange on a tile whose corner peels up" width="168" height="168">
+      </picture>
       <h1>Peel</h1>
       <p class="tagline">Open what's inside.</p>
       <p class="lede">A free unarchiver for your Mac. Double-click a ZIP, RAR, 7z or TAR archive and browse it like a folder in Finder, or extract it right where you are.</p>
