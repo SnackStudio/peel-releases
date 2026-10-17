@@ -1,6 +1,6 @@
 # Peel
 
-**Open what's inside.** Peel is a macOS unarchiver from [Snack Studio](https://www.snackstud.io/peel). Double-click an archive and it opens like a folder in Finder; extract with Finder Services (**Peel**, **Peel to…**, **Peel & Reveal**); preview with Quick Look.
+**Files, Unwrapped.** Peel is a macOS unarchiver from [Snack Studio](https://www.snackstud.io/peel). Double-click an archive and it opens like a folder in Finder; extract with Finder Services (**Peel**, **Peel to…**, **Peel & Reveal**); preview with Quick Look.
 
 ## Download
 
