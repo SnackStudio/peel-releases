@@ -1,0 +1,62 @@
+name: Report a bug
+description: Something in Peel isn't working. A few details help a lot.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. Please don't paste passwords or anything private from inside an
+        archive — Peel works entirely on your Mac and we never need those to help.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what Peel did instead. Copy the exact message if there was one.
+    validations:
+      required: true
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Which Peel do you have?
+      description: Mac App Store if you installed it from the App Store; Direct if you downloaded it from filesunwrapped.com.
+      options:
+        - Direct download (from filesunwrapped.com)
+        - Mac App Store
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: peel-version
+    attributes:
+      label: Peel version
+      description: Peel ▸ About Peel.
+      placeholder: "1.3.2"
+    validations:
+      required: true
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      description: The Apple menu ▸ About This Mac.
+      placeholder: "macOS 27.0.1"
+    validations:
+      required: true
+  - type: input
+    id: archive
+    attributes:
+      label: The archive (if it's about one)
+      description: Format and rough size — e.g. "a 2 GB password-protected ZIP", "a multi-part RAR". Please don't attach anything private.
+      placeholder: "e.g. 500 MB 7z"
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce (if you can)
+      description: The shortest sequence that triggers it. If you have a sample archive that holds nothing private, you can attach it.
+      placeholder: |
+        1. …
+        2. …
+  - type: markdown
+    attributes:
+      value: |
+        For refunds, lost licences or anything about a purchase, email **hello@snackstud.io** — that's
+        faster than an issue. See [filesunwrapped.com/support](https://filesunwrapped.com/support).

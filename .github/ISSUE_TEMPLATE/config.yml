@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Purchases, refunds and licences
+    url: https://filesunwrapped.com/support
+    about: Anything about a Peel Pro purchase, refund or lost licence — email hello@snackstud.io. It's faster than an issue.
+  - name: Support and FAQ
+    url: https://filesunwrapped.com/support
+    about: Requirements, installing, updating, the default app, uninstalling, and Peel Pro.
