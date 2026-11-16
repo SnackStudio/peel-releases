@@ -9,5 +9,6 @@
         { "key": "Access-Control-Allow-Origin", "value": "*" }
       ]
     }
-  ]
+  ],
+  "git": { "deploymentEnabled": { "**": false, "main": true } }
 }
